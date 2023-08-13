@@ -2112,8 +2112,8 @@ def side_quest_check_answer(message):
             elif wildcard == "Expose":
                 redwc_expose(message)
 
-            elif wildcard == "Dementia":
-                redwc_dementia(message, sender_id)
+            elif wildcard == "Your Loss":
+                redwc_your_loss(message, sender_id)
 
             else:
                 team.add_red_wildcard(wildcard, effect)    #add for the rest 
@@ -2251,7 +2251,7 @@ def redwc_expose(message):
     bot.send_message(message.from_user.id, "Oops, your team got hit with the red wildcard Expose and your list of green wildcards has been exposed to everyone to see....")
 
 
-def redwc_dementia(message, sender_id):
+def redwc_your_loss(message, sender_id):
     #data
     username = message.from_user.username
     team = profiles[username]["team"]
